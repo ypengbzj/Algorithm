@@ -15,4 +15,5 @@
  * [插入排序(InsertionSort)](InsertionSort)
  * [二分查找(BinarySearch)](BinarySearch)
  * [二叉搜索树BST(BinarySearchTree)](BinarySearchTree)
+ * [归并排序(MergeSort)](MergeSort)
  */
