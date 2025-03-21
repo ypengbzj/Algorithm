@@ -13,6 +13,7 @@
  * [Stack](Stack)
  * [Queue](Queue)
  * [链表(LinkedList)](LinkedList)
+ * [Tree](Tree)
  * [HashTable](HashTable)
  * [插入排序(InsertionSort)](InsertionSort)
  * [二分查找(BinarySearch)](BinarySearch)
