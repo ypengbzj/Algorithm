@@ -19,6 +19,7 @@
  * [二叉搜索树BST(BinarySearchTree)](BinarySearchTree)
  * [图(Graph)](Graph)
  * [广度优先搜索(BreadthFirstSearch)](BFS)
+ * [深度优先搜索(DepthFirstSearch)](DFS)
  * [插入排序(InsertionSort)](InsertionSort)
  * [二分查找(BinarySearch)](BinarySearch)
  * [归并排序(MergeSort)](MergeSort)

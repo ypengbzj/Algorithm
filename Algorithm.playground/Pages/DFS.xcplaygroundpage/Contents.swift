@@ -1,26 +1,18 @@
 //: [Previous](@previous)
 
 import Foundation
+import BFS_PageSources
 
-/// 广度优先搜索
-func breadthFirstSearch(_ graph: Graph, source: Node) -> [String] {
-    var queue = Queue<Node>()
-    queue.enqueue(source)
-    
+/// 深度优先搜索
+func depthFirstSearch(_ graph: Graph, source: Node) -> [String] {
     var nodesExplored = [source.label]
     source.visited = true
     
-    while let current = queue.dequeue() {
-        for edge in current.neighbors {
-            let neighborNode = edge.neighbor
-            if !neighborNode.visited {
-                queue.enqueue(neighborNode)
-                neighborNode.visited = true
-                nodesExplored.append(neighborNode.label)
-            }
+    for edge in source.neighbors {
+        if !edge.neighbor.visited {
+            nodesExplored += depthFirstSearch(graph, source: edge.neighbor)
         }
     }
-    
     return nodesExplored
 }
 
@@ -45,8 +37,7 @@ graph.addEdge(nodeE, neighbor: nodeH)
 graph.addEdge(nodeE, neighbor: nodeF)
 graph.addEdge(nodeF, neighbor: nodeG)
 
-let nodeExplored = breadthFirstSearch(graph, source: nodeA)
-print(nodeExplored)
-
+let nodesExplored = depthFirstSearch(graph, source: nodeA)
+print(nodesExplored)
 
 //: [Next](@next)
